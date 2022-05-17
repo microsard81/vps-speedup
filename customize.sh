@@ -46,13 +46,13 @@ cat << EOF > /bin/gtstatus
 
 p=""
 
-if [[ $(netstat -anlp 2>/dev/null | grep 65001 | grep ESTA | awk '{print $5}' | awk -F'[:]' '{print $1}') ]]; then
+if [[ \$(netstat -anlp 2>/dev/null | grep 65001 | grep ESTA | awk '{print $5}' | awk -F'[:]' '{print $1}') ]]; then
     p="connected"
 else
     p="not connected"
 fi
 
-echo $p
+echo \$p
 EOF
 
 chmod +x /bin/gtstatus
