@@ -21,7 +21,7 @@ read -p 'SU Serial Number: ' sn
 read -p 'VPS hostname: ' host
 read -p 'VPS Zabbix hostname: ' zabbix
 
-apt install -y zabbix-agent
+apt install -y zabbix-agent molly-guard
 
 cat << EOF > /etc/zabbix/zabbix_agentd.conf
 PidFile=/run/zabbix/zabbix_agentd.pid
